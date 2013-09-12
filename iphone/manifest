@@ -3,15 +3,17 @@
 # during compilation, packaging, distribution, etc.
 #
 version: 0.1
+apiversion: 2
 description: Tapjoy module
 author: Ali Faiz
 license: MIT License
-copyright: Copyright (c) 2010 by Ali Faiz
+copyright: Ali Faiz
 
 
 # these should not be edited
 name: tapjoy
 moduleid: com.tapjoy
-guid: 62b282dd-7190-4d1c-b731-2f4b31847f81
+guid: 6ea75af1-eee3-41d7-ade9-2339c3212454
 platform: iphone
-minsdk: 1.5.1
+minsdk: 3.1.2.GA
+.5.1

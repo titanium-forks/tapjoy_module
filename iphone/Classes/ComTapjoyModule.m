@@ -46,7 +46,7 @@
 	[super shutdown:sender];
 }
 
-#pragma mark Cleanup 
+#pragma mark Cleanup
 
 -(void)dealloc
 {
@@ -69,7 +69,7 @@
 {
 	if (count == 1 && [type isEqualToString:@"my_event"])
 	{
-		// the first (of potentially many) listener is being added 
+		// the first (of potentially many) listener is being added
 		// for event named 'my_event'
 	}
 }
@@ -90,11 +90,11 @@
 {
 	ENSURE_UI_THREAD_1_ARG(appId)
 	ENSURE_SINGLE_ARG(appId,NSString);
-	@try 
+	@try
 	{
 		[TapjoyConnect requestTapjoyConnectWithAppId:appId];
 	}
-	@catch (NSException * e) 
+	@catch (NSException * e)
 	{
 		NSLog(@"[WARN] Attempted to connect to Tapjoy, encountered error: %@",e);
 	}

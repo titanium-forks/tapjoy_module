@@ -5,15 +5,13 @@
 
 
 // open a single window
-var window = Ti.UI.createWindow({
+var win = Ti.UI.createWindow({
 	backgroundColor:'white'
 });
 var label = Ti.UI.createLabel();
-window.add(label);
-window.open();
+win.add(label);
+win.open();
 
 // TODO: write your module tests here
 var tapjoy = require('com.tapjoy');
-Ti.API.info("module is => " + tapjoy);
-
-tapjoy.connect('API_KEY');
+tapjoy.connect(YOUR_APP_KEY);

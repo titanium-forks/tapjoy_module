@@ -23,9 +23,15 @@ static NSString * orignalRequest = TJC_SERVICE_URL;
 {
 	// Device info.
 	UIDevice *device = [UIDevice currentDevice];
-	NSString *identifier = [device uniqueIdentifier];
+	//NSString *identifier = [device uniqueIdentifier];
 	NSString *model = [device model];
 	NSString *systemVersion = [device systemVersion];
+
+    CFUUIDRef uuidObj = CFUUIDCreate(nil);//create a new UUID
+    //get the string representation of the UUID
+    NSString  *identifier = (NSString*)CFUUIDCreateString(nil, uuidObj);
+    NSLog(@"UDID: %@", identifier);
+    CFRelease(uuidObj);
 	
 	//NSString *device_name = [device platform];
 	//NSLog(@"device name: %@", device_name);
